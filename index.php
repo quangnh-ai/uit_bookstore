@@ -67,7 +67,7 @@
                           </li>
                       <?php endif; ?>
                           
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">Thông Tin Chi Tiết</a></li>
                         <?php if(isset($_SESSION['login_id'])): ?>
                        <div class=" dropdown mr-4">
                             <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>

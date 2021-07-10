@@ -52,9 +52,9 @@
     						<img src="admin/assets/uploads/<?php echo $row['image_path'] ?>"  alt="" class="img-fluid rounded">
     					</div>
     					<div class="detail-field">
-    						<p>Book: <b><?php echo $row['title'] ?></b></p>
-    						<p>Author: <b><?php echo $row['author'] ?></b></p>
-    						<p>Price: <b><?php echo number_format($row['price'],2) ?></b></p>
+    						<p>Tên Sách: <b><?php echo $row['title'] ?></b></p>
+    						<p>Tác Giả: <b><?php echo $row['author'] ?></b></p>
+    						<p>Giá Tiền: <b><?php echo number_format($row['price'],2) ?></b></p>
     						<div class="d-flex col-sm-5">
 					            <span class="btn btn-sm btn-secondary btn-minus"><b><i class="fa fa-minus"></i></b></span>
 					            <input type="number" name="qty" id="" class="form-control form-control-sm qty-input" value="<?php echo $row['qty'] ?>">
@@ -70,17 +70,17 @@
     		<?php endwhile; ?>
     		</ul>
     	<?php else: ?>
-    		<center><b>No Item</b></center>
+    		<center><b>Không Có Sản Phẩm Nào</b></center>
     	<?php endif; ?>
     </div>
     <div class="col-md-4">
     	<div class="card mb-4">
-    		<div class="card-header bg-primary text-white"><b>Total Amount</b></div>
+    		<div class="card-header bg-primary text-white"><b>Tổng Số Tiền</b></div>
     		<div class="card-body">
     			<h4 class="text-right"><b id="tamount"><?php echo number_format($total,2) ?></b></h4>
     		</div>
     	</div>
-    	<button class="btn btn-block btn-primary" id="checkout" type="button">Checkout</button>
+    	<button class="btn btn-block btn-primary" id="checkout" type="button">Thanh Toán</button>
     </div>
 </div>
 </div>
