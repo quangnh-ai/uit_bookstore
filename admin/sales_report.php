@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card_body">
             <div class="row justify-content-center pt-4">
-                <label for="" class="mt-2">Month</label>
+                <label for="" class="mt-2">Tháng</label>
                 <div class="col-sm-3">
                     <input type="month" name="month" id="month" value="<?php echo $month ?>" class="form-control">
                 </div>
@@ -18,12 +18,12 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="">Date</th>
-                            <th class="">Customer</th>
-                            <th class="">Book</th>
-                            <th class="">Price</th>
-                            <th class="">QTY</th>
-                            <th class="">Amount</th>
+                            <th class="">Ngày</th>
+                            <th class="">Tên khách hàng</th>
+                            <th class="">Tên sách</th>
+                            <th class="">Giá tiền</th>
+                            <th class="">Số lượng</th>
+                            <th class="">Thành tiền</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,7 +64,7 @@
                         else:
                     ?>
                     <tr>
-                            <th class="text-center" colspan="7">No Data.</th>
+                            <th class="text-center" colspan="7">Không có doanh thu của tháng này</th>
                     </tr>
                     <?php 
                         endif;
@@ -72,7 +72,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th colspan="6" class="text-right">Total</th>
+                            <th colspan="6" class="text-right">Tổng tiền</th>
                             <th class="text-right"><?php echo number_format($total,2) ?></th>
                         </tr>
                     </tfoot>
@@ -80,7 +80,7 @@
                 <hr>
                 <div class="col-md-12 mb-4">
                     <center>
-                        <button class="btn btn-success btn-sm col-sm-3" type="button" id="print"><i class="fa fa-print"></i> Print</button>
+                        <button class="btn btn-success btn-sm col-sm-3" type="button" id="print"><i class="fa fa-print"></i> In bảng doanh thu tháng</button>
                     </center>
                 </div>
             </div>
