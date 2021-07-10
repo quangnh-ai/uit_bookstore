@@ -6,12 +6,12 @@
 			<input type="email" name="email" required="" class="form-control">
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Password</label>
+			<label for="" class="control-label">Mật Khẩu</label>
 			<input type="password" name="password" required="" class="form-control">
-			<small><a href="javascript:void(0)" id="new_account">Create New Account</a></small>
+			<small><a href="javascript:void(0)" id="new_account">Tạo Tài Khoản</a></small>
 		</div>
-		<button class="button btn btn-primary btn-sm">Login</button>
-		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+		<button class="button btn btn-primary btn-sm">Đăng Nhập</button>
+		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Thoát</button>
 	</form>
 </div>
 
