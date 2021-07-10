@@ -90,7 +90,7 @@ $cid = isset($_GET['category_id']) ? $_GET['category_id'] : 0;
                                             </small>
                                           </p>
                                          <p class="truncate"><?php echo $row['description'] ?></p>
-                                        <button class="btn btn-primary btn-sm view_prod" type="button" data-id="<?php echo $row['id'] ?>"> View</button>
+                                        <button class="btn btn-primary btn-sm view_prod" type="button" data-id="<?php echo $row['id'] ?>"> Xem Chi Tiết</button>
                                      </div>
                                  </div>
                              </div>

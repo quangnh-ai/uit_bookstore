@@ -151,7 +151,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="mt-0 text-white">Contact us</h2>
+                        <h2 class="mt-0 text-white">Thông Tin Liên Hệ</h2>
                         <hr class="divider my-4" />
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <br>
-            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - <?php echo $_SESSION['system']['name'] ?> | <a href="https://www.sourcecodester.com/" target="_blank">Sourcecodester</a></div></div>
+            <!-- <div class="container"><div class="small text-center text-muted">Copyright © 2020 - <?php echo $_SESSION['system']['name'] ?> | <a href="https://www.sourcecodester.com/" target="_blank">Sourcecodester</a></div></div> -->
         </footer>
         
        <?php include('footer.php') ?>

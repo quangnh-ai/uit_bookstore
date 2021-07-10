@@ -28,9 +28,9 @@ while($row=$cat_qry->fetch_array()){
 </style>
 <div class="container-fluid">
 	<img src="admin/assets/uploads/<?php echo $image_path ?>" class="d-flex w-100" alt="">
-	<p>Title: <large><b><?php echo $title ?></b></large></p>
-    <p>Author: <b><?php echo $author ?></b></p>
-	<p>Category: <b>
+	<p>Tên Sách: <large><b><?php echo $title ?></b></large></p>
+    <p>Tác Giả: <b><?php echo $author ?></b></p>
+	<p>Thể Loại: <b>
     <?php 
       $cats = '';
       $cat = explode(',', $category_ids);
@@ -45,8 +45,8 @@ while($row=$cat_qry->fetch_array()){
       echo $cats;
       ?>
     </b></p>
-    <p>Price: <b><?php echo number_format($price,2) ?></b></p>
-	<p>Description:</p>
+    <p>Giá Tiền: <b><?php echo number_format($price,2) ?></b></p>
+	<p>Mô Tả:</p>
 	<p class=""><small><i><?php echo $description ?></i></small></p>
 	<div class="d-flex jusctify-content-center col-md-12">
         <div class="d-flex col-sm-6">
@@ -54,7 +54,7 @@ while($row=$cat_qry->fetch_array()){
             <input type="number" name="qty" id="qty" value="1">
             <span class="btn btn-sm btn-secondary btn-plus"><b><i class="fa fa-plus"></i></b></span>
         </div>
-		<button class="btn btn-primary btn-block btn-sm col-sm-6" type="button" id="add_to_cart">Add to Cart</button>
+		<button class="btn btn-primary btn-block btn-sm col-sm-6" type="button" id="add_to_cart">Thêm vào giỏ hàng</button>
 	</div>
 </div>
 <script>
