@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 09:45 AM
+-- Generation Time: Jul 10, 2021 at 09:51 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -47,7 +47,8 @@ INSERT INTO `books` (`id`, `category_ids`, `title`, `author`, `description`, `qt
 (1, 4, 'Sample Book', 'Sample Author', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt dolor in odio aliquet placerat. Mauris vestibulum lacinia justo, at sollicitudin nisi pretium in. Vivamus et ex at purus placerat laoreet faucibus vitae enim. Sed nibh ex, varius congue augue vitae, ullamcorper porta lorem. Praesent ex nunc, faucibus id eros nec, dapibus tempor justo. Ut turpis urna, euismod ac tincidunt vitae, interdum vel purus. Etiam pellentesque leo eget commodo dignissim. Proin ac lorem id lorem euismod posuere eget eget ipsum.', 0, 10000, '1604631420_books-1419613.jpg', '2020-11-06 10:57:51'),
 (2, 2, 'Python Programming', 'Anthony Brun', 'A Step by Step Guide from Beginner to  Expert', 0, 10000, '1604631960_python_book.jpg', '2020-11-06 11:06:58'),
 (3, 1, 'Lập Trình Hướng Đối Tượng', 'Trương Hải Bằng', 'Sách lập trình hướng đối tượng', 0, 10000, '1625902320_oop.jpg', '2021-07-10 14:32:09'),
-(4, 3, 'Thực Hành Cơ Sở Dữ Liệu', 'Đỗ Thị Minh Phụng', 'Sách thực hành cơ sở dữ liệu', 0, 10000, '1625902440_database.jpg', '2021-07-10 14:34:06');
+(4, 3, 'Thực Hành Cơ Sở Dữ Liệu', 'Đỗ Thị Minh Phụng', 'Sách thực hành cơ sở dữ liệu', 0, 10000, '1625902440_database.jpg', '2021-07-10 14:34:06'),
+(5, 2, 'Xử lý ngôn ngữ tự nhiên', 'Nguyễn Tuấn Đăng', 'Sách xử lý ngôn ngữ tự nhiên', 0, 10000, '1625903340_nlp.jpg', '2021-07-10 14:49:16');
 
 -- --------------------------------------------------------
 
@@ -278,7 +279,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cart`
