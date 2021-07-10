@@ -44,7 +44,7 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Trang Chủ</a></li>
                         <?php if(isset($_SESSION['login_id'])): ?>
 
 
@@ -52,7 +52,7 @@
                           <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
                             <div class="badge badge-danger cart-count">0</div>
                             <i class="fa fa-shopping-cart"></i>
-                            <span>Cart</span>
+                            <span>Giỏ Hàng</span>
                           </a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:25vw">
                             <div class="cart-list w-100" id="cart_product">
@@ -61,7 +61,7 @@
                             </div>
                             
                             <div class="d-flex bg-light justify-content-center w-100 p-2">
-                                <a href="index.php?page=cart" class="btn btn-sm btn-primary btn-block col-sm-4 text-white"><i class="fa fa-edit"></i>  View Cart</a>
+                                <a href="index.php?page=cart" class="btn btn-sm btn-primary btn-block col-sm-4 text-white"><i class="fa fa-edit"></i> Xem Giỏ Hàng</a>
                             </div>
                           </div>
                           </li>
@@ -72,12 +72,12 @@
                        <div class=" dropdown mr-4">
                             <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>
                               <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
-                                <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
-                                <a class="dropdown-item" href="admin/ajax.php?action=logout2"><i class="fa fa-power-off"></i> Logout</a>
+                                <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Quản Lý Tài Khoản</a>
+                                <a class="dropdown-item" href="admin/ajax.php?action=logout2"><i class="fa fa-power-off"></i> Đăng Xuất</a>
                               </div>
                         </div>
                       <?php else: ?>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="javascript:void(0)" id="login_now">Login</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="javascript:void(0)" id="login_now">Đăng Nhập</a></li>
                       <?php endif; ?>
                        
                         
