@@ -6,22 +6,22 @@
 	
 	<div class="row">
 	<div class="col-lg-12">
-			<button class="btn btn-primary float-right btn-sm" id="new_user"><i class="fa fa-plus"></i> New user</button>
+			<button class="btn btn-primary float-right btn-sm" id="new_user"><i class="fa fa-plus"></i> Thêm admin mới</button>
 	</div>
 	</div>
 	<br>
 	<div class="col-lg-12">
 		<div class="card ">
-			<div class="card-header"><b>User List</b></div>
+			<div class="card-header"><b>Danh sách các admin</b></div>
 			<div class="card-body">
 				<table class="table-striped table-bordered">
 			<thead>
 				<tr>
 					<th class="text-center">#</th>
-					<th class="text-center">Name</th>
-					<th class="text-center">Username</th>
-					<th class="text-center">Type</th>
-					<th class="text-center">Action</th>
+					<th class="text-center">Tên</th>
+					<th class="text-center">Tên đăng nhập</th>
+					<th class="text-center">Loại tài khoản</th>
+					<th class="text-center">Trạng thái</th>
 				</tr>
 			</thead>
 			<tbody>

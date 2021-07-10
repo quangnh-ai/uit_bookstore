@@ -23,7 +23,7 @@
 
 <script>
 	$('#new_account').click(function(){
-		uni_modal("Create an Account",'signup.php?redirect=index.php?page=checkout')
+		uni_modal("Tạo tài khoản",'signup.php?redirect=index.php?page=checkout')
 	})
 	$('#login-frm').submit(function(e){
 		e.preventDefault()
@@ -43,7 +43,7 @@
 				if(resp == 1){
 					location.href ='<?php echo isset($_GET['redirect']) ? $_GET['redirect'] : 'index.php?page=home' ?>';
 				}else{
-					$('#login-frm').prepend('<div class="alert alert-danger">Email or password is incorrect.</div>')
+					$('#login-frm').prepend('<div class="alert alert-danger">Sai tài khoản hoặc mật khẩu.</div>')
 		end_load()
 				}
 			}

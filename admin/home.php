@@ -40,7 +40,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <?php echo "Welcome back ". $_SESSION['login_name']."!"  ?>
+                    <?php echo "Tên tài khoản: ". $_SESSION['login_name'].""  ?>
                     <hr>
                     <div class="col-md-12">
                         <div class="row">
@@ -51,7 +51,7 @@
 		                                <h4><b>
 		                                    <?php echo $conn->query("SELECT * FROM books")->num_rows ?>
 		                                </b></h4>
-		                                <p><b>Total Books</b></p>
+		                                <p><b>Số sách có trong hệ thống</b></p>
 	                                </div>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
 		                                <h4><b>
 		                                    <?php echo $conn->query("SELECT * FROM categories")->num_rows ?>
 		                                </b></h4>
-		                                <p><b>Total Categories</b></p>
+		                                <p><b>Số thể loại có trong hệ thống</b></p>
 	                                </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
 		                                <h4><b>
 		                                    <?php echo $conn->query("SELECT * FROM orders where status = 0")->num_rows ?>
 		                                </b></h4>
-		                                <p><b>Total Pending Orders</b></p>
+		                                <p><b>Số lượng đơn hàng đang chờ thanh toán</b></p>
 	                                </div>
                                 </div>
                             </div>

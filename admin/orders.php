@@ -8,7 +8,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>order List</b>
+						<b>Danh sách đơn hàng</b>
 					</div>
 					<div class="card-body">
 						<table class="table table-bordered table-hover">
@@ -24,12 +24,12 @@
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="text-center">Date</th>
-									<th class="text-center">Customer</th>
-									<th class="text-center">Items</th>
-									<th class="text-center">Total Amount</th>
-									<th class="text-center">Status</th>
-									<th class="text-center">Action</th>
+									<th class="text-center">Ngày</th>
+									<th class="text-center">Tên khách hàng</th>
+									<th class="text-center">Số lượng</th>
+									<th class="text-center">Tổng giá tiền</th>
+									<th class="text-center">Trạng thái</th>
+									<th class="text-center">Tùy chỉnh</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -56,14 +56,14 @@
 									</td>
 									<td class="text-center">
 										<?php if($row['status'] == 0): ?>
-											<span class="badge badge-primary">Pending</span>
+											<span class="badge badge-primary">Đang chờ thanh toán</span>
 										<?php elseif($row['status'] == 1): ?>
-											<span class="badge badge-success">Confirmed</span>
+											<span class="badge badge-success">Đã thanh toán</span>
 										<?php endif; ?>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-primary edit_order" type="button" data-id="<?php echo $row['id'] ?>">View</button>
-										<button class="btn btn-sm btn-danger delete_order" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-sm btn-primary edit_order" type="button" data-id="<?php echo $row['id'] ?>">Xem chi tiết</button>
+										<button class="btn btn-sm btn-danger delete_order" type="button" data-id="<?php echo $row['id'] ?>">Xóa đơn hàng</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
