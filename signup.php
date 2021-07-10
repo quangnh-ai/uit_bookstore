@@ -12,15 +12,15 @@ if(isset($_SESSION['login_id'])){
 	<form action="" id="signup-frm">
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 		<div class="form-group">
-			<label for="" class="control-label">Name</label>
+			<label for="" class="control-label">Họ Và Tên</label>
 			<input type="text" name="name" required="" class="form-control" value="<?php echo isset($name) ? $name : '' ?>">
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Contact</label>
+			<label for="" class="control-label">Số Điện Thoại</label>
 			<input type="text" name="contact" required="" class="form-control" value="<?php echo isset($contact) ? $contact : '' ?>">
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Address</label>
+			<label for="" class="control-label">Địa Chỉ</label>
 			<textarea cols="30" rows="3" name="address" required="" class="form-control"><?php echo isset($address) ? $address : '' ?></textarea>
 		</div>
 		<div class="form-group">
@@ -28,14 +28,14 @@ if(isset($_SESSION['login_id'])){
 			<input type="email" name="email" required="" class="form-control" value="<?php echo isset($email) ? $email : '' ?>">
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Password</label>
+			<label for="" class="control-label">Mật Khẩu</label>
 			<input type="password" name="password" class="form-control" <?php echo isset($email) ? '' : "required" ?>>
 			<?php if(isset($id)): ?>
-				<small><i>Leave this field blank if you dont want to change your password.</i></small>
+				<small><i>Để trống ô này nếu bạn không muốn đổi mật khẩu</i></small>
 			<?php endif; ?>
 		</div>
-		<button class="button btn btn-primary btn-sm"><?php echo !isset($id) ? "Create" : "Update" ?></button>
-		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+		<button class="button btn btn-primary btn-sm"><?php echo !isset($id) ? "Tạo Tài Khoản" : "Cập Nhật" ?></button>
+		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Thoát</button>
 
 	</form>
 </div>
