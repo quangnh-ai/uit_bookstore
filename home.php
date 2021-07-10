@@ -69,8 +69,8 @@ $cid = isset($_GET['category_id']) ? $_GET['category_id'] : 0;
                                       <div class="float-right align-top d-flex">
                                      </div>
                                      <div class="card-body prod-item">
-                                         <p>Title: <?php echo $row['title'] ?></p>
-                                         <p>Author: <?php echo $row['author'] ?></p>
+                                         <p>Tên sách: <?php echo $row['title'] ?></p>
+                                         <p>Tác giả: <?php echo $row['author'] ?></p>
                                          <p>
                                             <small>
                                           <?php 

@@ -1,7 +1,7 @@
 <?php session_start() ?>
 <div class="container-fluid">
 	<div class="col-lg-12">
-		<p>This transaction accept only cash on delivery. Please wait for verification email or call from the management after checking out</p>
+		<p>Nhập địa chỉ giao hàng</p>
 		<form id="manage-order">
 			<div class="form-group">
 				<label for="" class="control-label">Địa Chỉ Giao Hàng</label>

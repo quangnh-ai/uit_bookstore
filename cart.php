@@ -141,7 +141,7 @@
      	$('#tamount').text(parseFloat(total).toLocaleString('en-US',{style:"decimal",maximumFractionDigits:2,minimumFractionDigits:2}))
      }
      $('.rem_item').click(function(){
-     	_conf("Are you sure to remove this item from cart?","delete_cart",[$(this).attr('data-id')])
+     	_conf("Bạn có muốn xóa sản phẩm khỏi giỏ hàng?","delete_cart",[$(this).attr('data-id')])
      })
      function delete_cart($id){
      	start_load()
@@ -151,13 +151,13 @@
         	data:{id:$id},
         	success:function(resp){
         		if(resp == 1){
-            		alert_toast("Item removed from cart","success");
+            		alert_toast("Xóa thành công","success");
         			setTimeout(function(){ location.reload() },750)
         		}
         	}
         })
      }
      $('#checkout').click(function(){
-     	uni_modal('Chechkout',"manage_order.php");
+     	uni_modal('Thanh toán',"manage_order.php");
      })
 </script>
