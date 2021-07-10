@@ -4,7 +4,7 @@
 		<p>This transaction accept only cash on delivery. Please wait for verification email or call from the management after checking out</p>
 		<form id="manage-order">
 			<div class="form-group">
-				<label for="" class="control-label">Delivery Address</label>
+				<label for="" class="control-label">Địa Chỉ Giao Hàng</label>
 				<textarea name="address" id="" cols="30" rows="4" class="form-control" required=""><?php echo $_SESSION['login_address'] ?></textarea>
 			</div>
 		</form>
