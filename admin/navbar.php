@@ -22,7 +22,7 @@
 				<a href="index.php?page=sales_report" class="nav-item nav-sales_report"><span class='icon-field'><i class="fa fa-th-list"></i></span> Báo cáo doanh thu tháng</a>
 				<?php if($_SESSION['login_type'] == 1): ?>
 				<div class="mx-2 text-white">Hệ thống</div>
-				<a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users "></i></span> Thông tin admin</a>
+				<a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users "></i></span> Thông tin nhân viên</a>
 				<a href="index.php?page=site_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cogs"></i></span> Thông tin trang web</a>
 			<?php endif; ?>
 		</div>

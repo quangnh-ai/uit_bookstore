@@ -175,13 +175,13 @@
     </body>
     <script type="text/javascript">
       $('#login').click(function(){
-        uni_modal("Login",'login.php')
+        uni_modal("Đăng nhập",'login.php')
       })
       $('.datetimepicker').datetimepicker({
           format:'Y-m-d H:i',
       })
       $('#manage_my_account').click(function(){
-          uni_modal("Manage Account",'signup.php');
+          uni_modal("Quản lý tài khoản",'signup.php');
       })
     </script>
     <?php $conn->close() ?>

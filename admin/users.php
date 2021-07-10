@@ -6,13 +6,13 @@
 	
 	<div class="row">
 	<div class="col-lg-12">
-			<button class="btn btn-primary float-right btn-sm" id="new_user"><i class="fa fa-plus"></i> Thêm admin mới</button>
+			<button class="btn btn-primary float-right btn-sm" id="new_user"><i class="fa fa-plus"></i> Thêm tài khoản mới</button>
 	</div>
 	</div>
 	<br>
 	<div class="col-lg-12">
 		<div class="card ">
-			<div class="card-header"><b>Danh sách các admin</b></div>
+			<div class="card-header"><b>Danh sách tài khoản</b></div>
 			<div class="card-body">
 				<table class="table-striped table-bordered">
 			<thead>
@@ -54,9 +54,9 @@
 							    <span class="sr-only">Toggle Dropdown</span>
 							  </button>
 							  <div class="dropdown-menu">
-							    <a class="dropdown-item edit_user" href="javascript:void(0)" data-id = '<?php echo $row['id'] ?>'>Edit</a>
+							    <a class="dropdown-item edit_user" href="javascript:void(0)" data-id = '<?php echo $row['id'] ?>'>Chỉnh sửa</a>
 							    <div class="dropdown-divider"></div>
-							    <a class="dropdown-item delete_user" href="javascript:void(0)" data-id = '<?php echo $row['id'] ?>'>Delete</a>
+							    <a class="dropdown-item delete_user" href="javascript:void(0)" data-id = '<?php echo $row['id'] ?>'>Xóa</a>
 							  </div>
 							</div>
 						</center>
