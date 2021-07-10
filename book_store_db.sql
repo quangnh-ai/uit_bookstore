@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 07:36 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Jul 10, 2021 at 09:45 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,7 +45,9 @@ CREATE TABLE `books` (
 
 INSERT INTO `books` (`id`, `category_ids`, `title`, `author`, `description`, `qty`, `price`, `image_path`, `date_created`) VALUES
 (1, 4, 'Sample Book', 'Sample Author', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt dolor in odio aliquet placerat. Mauris vestibulum lacinia justo, at sollicitudin nisi pretium in. Vivamus et ex at purus placerat laoreet faucibus vitae enim. Sed nibh ex, varius congue augue vitae, ullamcorper porta lorem. Praesent ex nunc, faucibus id eros nec, dapibus tempor justo. Ut turpis urna, euismod ac tincidunt vitae, interdum vel purus. Etiam pellentesque leo eget commodo dignissim. Proin ac lorem id lorem euismod posuere eget eget ipsum.', 0, 10000, '1604631420_books-1419613.jpg', '2020-11-06 10:57:51'),
-(2, 2, 'Python Programming', 'Anthony Brun', 'A Step by Step Guide from Beginner to  Expert', 0, 10000, '1604631960_python_book.jpg', '2020-11-06 11:06:58');
+(2, 2, 'Python Programming', 'Anthony Brun', 'A Step by Step Guide from Beginner to  Expert', 0, 10000, '1604631960_python_book.jpg', '2020-11-06 11:06:58'),
+(3, 1, 'Lập Trình Hướng Đối Tượng', 'Trương Hải Bằng', 'Sách lập trình hướng đối tượng', 0, 10000, '1625902320_oop.jpg', '2021-07-10 14:32:09'),
+(4, 3, 'Thực Hành Cơ Sở Dữ Liệu', 'Đỗ Thị Minh Phụng', 'Sách thực hành cơ sở dữ liệu', 0, 10000, '1625902440_database.jpg', '2021-07-10 14:34:06');
 
 -- --------------------------------------------------------
 
@@ -60,6 +62,13 @@ CREATE TABLE `cart` (
   `price` float NOT NULL,
   `customer_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `book_id`, `qty`, `price`, `customer_id`) VALUES
+(16, 4, 1, 10000, 1);
 
 -- --------------------------------------------------------
 
@@ -128,7 +137,9 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `customer_id`, `address`, `total_amount`, `status`, `date_created`) VALUES
 (3, 2, 'TPHCM', 0, 1, '2021-07-10 11:04:29'),
-(4, 2, 'TPHCM', 0, 1, '2021-07-10 11:15:22');
+(4, 2, 'TPHCM', 0, 1, '2021-07-10 11:15:22'),
+(5, 2, 'TPHCM', 0, 1, '2021-07-10 13:54:01'),
+(6, 2, 'TPHCM', 0, 1, '2021-07-10 14:35:08');
 
 -- --------------------------------------------------------
 
@@ -150,7 +161,12 @@ CREATE TABLE `order_list` (
 
 INSERT INTO `order_list` (`id`, `order_id`, `book_id`, `qty`, `price`) VALUES
 (5, 3, 2, 3, 10000),
-(6, 4, 2, 1, 10000);
+(6, 4, 2, 1, 10000),
+(7, 5, 2, 2, 10000),
+(8, 5, 1, 1, 10000),
+(9, 6, 3, 1, 10000),
+(10, 6, 4, 1, 10000),
+(11, 6, 2, 1, 10000);
 
 -- --------------------------------------------------------
 
@@ -172,7 +188,7 @@ CREATE TABLE `system_settings` (
 --
 
 INSERT INTO `system_settings` (`id`, `name`, `email`, `contact`, `cover_img`, `about_content`) VALUES
-(1, 'UIT Library Bookstore', 'info@sample.com', '123456', '', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt dolor in odio aliquet placerat. Mauris vestibulum lacinia justo, at sollicitudin nisi pretium in. Vivamus et ex at purus placerat laoreet faucibus vitae enim. Sed nibh ex, varius congue augue vitae, ullamcorper porta lorem. Praesent ex nunc, faucibus id eros nec, dapibus tempor justo. Ut turpis urna, euismod ac tincidunt vitae, interdum vel purus. Etiam pellentesque leo eget commodo dignissim. Proin ac lorem id lorem euismod posuere eget eget ipsum.&lt;/p&gt;&lt;p&gt;Nunc tincidunt augue eu ipsum aliquam venenatis. Vestibulum metus nunc, porta quis commodo id, consectetur id ipsum. Phasellus luctus tortor vitae nisl consectetur molestie. Sed varius ornare leo, sit amet faucibus turpis placerat non. Nam ipsum quam, dapibus vitae consequat vitae, molestie nec lacus. Praesent gravida lacus sed pellentesque posuere. Donec tincidunt urna nec magna pulvinar, et viverra leo dictum. Cras aliquet odio ac dapibus porttitor.&lt;/p&gt;&lt;p&gt;Suspendisse sed auctor enim, eu laoreet purus. Fusce aliquam nisl odio, condimentum commodo risus bibendum eu. Proin vitae felis sollicitudin, porta leo sit amet, pretium lorem. Proin facilisis egestas lacus, eu mollis felis egestas eget. Phasellus efficitur accumsan dolor, ut pharetra tortor posuere nec. Phasellus rutrum lacus in purus facilisis tempus. Donec a sapien a dolor varius rutrum in vel velit. Proin mattis porttitor commodo. Nam vitae porta diam, auctor lacinia nibh. Sed sodales commodo suscipit. Suspendisse eu lectus ac ligula fringilla auctor. Donec rutrum, lectus in cursus hendrerit, leo massa dignissim dui, eu tempus lacus est laoreet enim. Nunc lobortis condimentum vulputate.&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://localhost/book_store/admin/assets/uploads/1604629260_books-1419613.jpg&quot; style=&quot;width: 465px;&quot; class=&quot;fr-fic fr-dib&quot;&gt;&lt;/p&gt;&lt;p&gt;Curabitur bibendum sem non sagittis sagittis. Fusce ac orci tincidunt, viverra enim id, posuere felis. Cras sed urna elit. Curabitur facilisis odio porta eros facilisis varius. Sed vulputate dolor ac venenatis porta. Suspendisse sit amet odio mollis, porta erat ut, venenatis velit. Nunc sollicitudin lorem vitae purus sodales malesuada. Maecenas pellentesque, nisl sed hendrerit venenatis, tortor augue commodo felis, non cursus risus massa pulvinar sapien. Aliquam vitae nisi et magna condimentum faucibus nec sit amet est. Etiam vulputate iaculis sodales. Fusce ut turpis ut ante laoreet interdum sed ac velit. Suspendisse lacinia felis erat, in lacinia risus volutpat id. Praesent egestas odio diam, ut congue quam sollicitudin laoreet. Aenean elit eros, dapibus id purus blandit, imperdiet vehicula augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam maximus elementum nulla nec consequat.&lt;/p&gt;&lt;p&gt;In aliquam tellus turpis. Etiam pretium ex cursus viverra interdum. Quisque maximus tortor lacus, nec ullamcorper risus bibendum nec. Mauris at ante dui. Vivamus eget suscipit ex. Nullam a purus tincidunt, molestie purus et, placerat enim. Mauris luctus erat sit amet suscipit luctus. Mauris lorem sapien, maximus sit amet varius nec, scelerisque sit amet felis. Phasellus et consequat metus. Sed suscipit aliquet ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nec pharetra nunc, a pretium libero. Etiam rhoncus ante nibh, a venenatis felis ullamcorper sit amet.&lt;/p&gt;');
+(1, 'UIT Library Bookstore', 'info@sample.com', '123456', '', '&lt;p&gt;Đồ &amp;aacute;n m&amp;ocirc;n Nhập M&amp;ocirc;n C&amp;ocirc;ng Nghệ Phần Mềm&lt;/p&gt;&lt;p&gt;T&amp;ecirc;n đề t&amp;agrave;i: Website B&amp;aacute;n S&amp;aacute;ch trong trường Đại Học C&amp;ocirc;ng Nghệ Th&amp;ocirc;ng Tin&lt;/p&gt;&lt;p&gt;- Giảng vi&amp;ecirc;n hướng dẫn:&lt;/p&gt;&lt;p&gt;&amp;nbsp; + Huỳnh Ngọc T&amp;iacute;n&lt;/p&gt;&lt;p&gt;&amp;nbsp; + Trần Kh&amp;aacute;nh Nguy&amp;ecirc;n&lt;/p&gt;&lt;p&gt;- Sinh vi&amp;ecirc;n thực hiện:&lt;/p&gt;&lt;p&gt;&amp;nbsp; + Nguyễn Hồng Quang - 18521297&lt;/p&gt;&lt;p&gt;&amp;nbsp; + L&amp;ecirc; Anh Triều - 18521536&lt;/p&gt;&lt;p&gt;&amp;nbsp; + Nguyễn Ngọc T&amp;acirc;m - 19522163&lt;/p&gt;&lt;p&gt;&amp;nbsp; + Huỳnh Thị Hồng Nhi - 19521961&lt;/p&gt;&lt;p&gt;&amp;nbsp; + Trần Thị Ho&amp;agrave;i Thu - 19522311&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -262,13 +278,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -286,13 +302,13 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `order_list`
 --
 ALTER TABLE `order_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `system_settings`
