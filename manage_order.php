@@ -1,10 +1,10 @@
 <?php session_start() ?>
 <div class="container-fluid">
 	<div class="col-lg-12">
-		<p>Nhập địa chỉ giao hàng</p>
+		<p>Nhập ngày nhận hàng</p>
 		<form id="manage-order">
 			<div class="form-group">
-				<label for="" class="control-label">Địa Chỉ Giao Hàng</label>
+				<label for="" class="control-label">Ngày nhận hàng</label>
 				<textarea name="address" id="" cols="30" rows="4" class="form-control" required=""><?php echo $_SESSION['login_address'] ?></textarea>
 			</div>
 		</form>
